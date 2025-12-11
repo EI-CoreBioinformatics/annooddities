@@ -1,4 +1,6 @@
 # AnnoOddities
+Gemy George Kaithakottil, David Swarbreck  
+[![DOI](https://zenodo.org/badge/1114377633.svg)](https://doi.org/10.5281/zenodo.17898504)
 
 AnnoOddies is a Python utility for detecting, identifying and characterising oddities in genome annotations. It parses and integrates statistics from multiple tools - including [AGAT](https://github.com/NBISweden/AGAT), [Mikado](https://github.com/EI-CoreBioinformatics/mikado), and [GFFread](https://github.com/gpertea/gffread), to generate a harmonised set of extended metrics that help assess annotation quality and highlight potential anomalies within genome annotations.
 
