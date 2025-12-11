@@ -6,6 +6,9 @@ In addition to summarising standard outputs, AnnoOddities computes a range of ad
 
 Currently, AnnoOddities runs [AGAT](https://github.com/NBISweden/AGAT), [Mikado](https://github.com/EI-CoreBioinformatics/mikado), and [GFFread](https://github.com/gpertea/gffread) to generate and combine statistics into unified reports. Future developments will focus on extending the workflow to incorporate additional quality assessment tools such as BUSCO and OMArk, enabling integrated comparisons of annotation and genome completeness metrics.
 
+This tool was developed as part of **[BioHackathon 2025](https://biohackathon-europe.org/), Project 23: Streamlining FAIR Metadata for Biodiversity Genome Annotations**.
+Project details: https://github.com/elixir-europe/biohackathon-projects-2025/blob/main/23.md
+
 
 ## Installation
 
