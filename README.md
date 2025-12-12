@@ -48,6 +48,33 @@ $ sudo singularity build annooddities-0.1.0.sif annooddities-0.1.0.def
 $ singularity exec annooddities-0.1.0.sif annooddities -h
 ```
 
+### Manual Installation
+
+#### Install dependencies
+
+* Mikado - [Installation](https://github.com/EI-CoreBioinformatics/mikado?tab=readme-ov-file#installation)  
+* AGAT - [Installation](https://github.com/NBISweden/AGAT?tab=readme-ov-file#installation)  
+* GffRead - [Installation](https://github.com/gpertea/gffread?tab=readme-ov-file#installation)  
+
+#### Get AnnoOddities
+First, obtain the source code:
+```console
+git clone https://github.com/EI-CoreBioinformatics/annooddities.git
+cd annooddities
+```
+Build and install using [UV](https://github.com/astral-sh/uv?tab=readme-ov-file#uv)
+```console
+version=0.1.0 \
+     && uv build \
+     && pip install --prefix=/path/to/software/annooddities/${version}/x86_64 -U dist/*whl
+```
+
+Also, make sure that both `PATH` and `PYTHONPATH` (below is for python3.10) environments are updated
+```console
+export PATH=/path/to/software/annooddities/${version}/x86_64/bin:$PATH
+export PYTHONPATH=/path/to/software/annooddities/${version}/x86_64/lib/python3.10/site-packages
+```
+
 ### Usage
 ```console
 $ annooddities -h
