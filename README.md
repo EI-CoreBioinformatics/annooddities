@@ -1,3 +1,8 @@
+![PyPI - Version](https://img.shields.io/pypi/v/annooddities)
+![GitHub Release](https://img.shields.io/github/v/release/EI-CoreBioinformatics/annooddities)
+![Pepy Total Downloads](https://img.shields.io/pepy/dt/annooddities)
+![Docker Pulls](https://img.shields.io/docker/pulls/gemygk/annooddities)
+
 # AnnoOddities
 Gemy George Kaithakottil, David Swarbreck  
 [![DOI](https://zenodo.org/badge/1114377633.svg)](https://doi.org/10.5281/zenodo.17898504)
