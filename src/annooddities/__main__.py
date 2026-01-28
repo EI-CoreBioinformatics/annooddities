@@ -130,11 +130,22 @@ class AnnoOddities:
 
     @staticmethod
     def _format_number(x):
+        """Format input: returns int, float, or original string/NA"""
+
+        if isinstance(x, (int, float)):
+            return x
+
+        if x == "NA" or not x or not isinstance(x, str):
+            return x
+
+        clean_x = x.replace(",", "").strip()
+
         try:
-            int_x = int(x.replace(",", ""))
-            return str(int_x)
+            if "." not in clean_x:
+                return int(clean_x)
+            return float(clean_x)
         except ValueError:
-            return "{:.02f}".format(float(x.replace(",", "")))
+            return x
 
     @staticmethod
     def parse_mikado_stats(mikado_stats):
@@ -211,20 +222,20 @@ class AnnoOddities:
         for row in data_list:
             stat_name = row["Stat"]
             data["Stat"][stat_name] = {
-                "Total": row["Total"],
-                "Average": row["Average"],
-                "Mode": row["Mode"],
-                "Min": row["Min"],
-                "1%": row["1%"],
-                "5%": row["5%"],
-                "10%": row["10%"],
-                "25%": row["25%"],
-                "Median": row["Median"],
-                "75%": row["75%"],
-                "90%": row["90%"],
-                "95%": row["95%"],
-                "99%": row["99%"],
-                "Max": row["Max"],
+                "Total": AnnoOddities._format_number(row["Total"]),
+                "Average": AnnoOddities._format_number(row["Average"]),
+                "Mode": AnnoOddities._format_number(row["Mode"]),
+                "Min": AnnoOddities._format_number(row["Min"]),
+                "1%": AnnoOddities._format_number(row["1%"]),
+                "5%": AnnoOddities._format_number(row["5%"]),
+                "10%": AnnoOddities._format_number(row["10%"]),
+                "25%": AnnoOddities._format_number(row["25%"]),
+                "Median": AnnoOddities._format_number(row["Median"]),
+                "75%": AnnoOddities._format_number(row["75%"]),
+                "90%": AnnoOddities._format_number(row["90%"]),
+                "95%": AnnoOddities._format_number(row["95%"]),
+                "99%": AnnoOddities._format_number(row["99%"]),
+                "Max": AnnoOddities._format_number(row["Max"]),
             }
         with open(output_stats_yaml, "w") as yaml_file:
             yaml.dump(dict(data), yaml_file)
