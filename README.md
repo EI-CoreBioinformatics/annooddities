@@ -1,7 +1,7 @@
-![PyPI - Version](https://img.shields.io/pypi/v/annooddities)
-![GitHub Release](https://img.shields.io/github/v/release/EI-CoreBioinformatics/annooddities)
-![Pepy Total Downloads](https://img.shields.io/pepy/dt/annooddities)
-![Docker Pulls](https://img.shields.io/docker/pulls/gemygk/annooddities)
+[![PyPI - Version](https://img.shields.io/pypi/v/annooddities)](https://pypi.python.org/pypi/annooddities)
+[![GitHub Release](https://img.shields.io/github/v/release/EI-CoreBioinformatics/annooddities)](https://github.com/EI-CoreBioinformatics/annooddities/releases)
+[![Pepy Total Downloads](https://img.shields.io/pepy/dt/annooddities)](https://pypistats.org/packages/annooddities)
+[![Docker Pulls](https://img.shields.io/docker/pulls/gemygk/annooddities)](https://hub.docker.com/r/gemygk/annooddities)
 
 # AnnoOddities
 Gemy George Kaithakottil, David Swarbreck  
