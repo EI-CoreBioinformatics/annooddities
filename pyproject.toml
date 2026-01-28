@@ -1,6 +1,6 @@
 [project]
 name = "AnnoOddities"
-version = "0.1.0"
+version = "0.2.0"
 description = "AnnoOddities is a Python utility for detecting, identifying and characterising oddities in genome annotations"
 readme = "README.md"
 authors = [

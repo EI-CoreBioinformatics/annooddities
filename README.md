@@ -25,7 +25,7 @@ All installation methods below will install AnnoOddities along with its dependen
 AnnoOddities can be installed with Docker. If you don't have Docker, please install [docker](https://docs.docker.com/get-docker/) first. Then you can pull the Docker image with AnnoOddities installed
 
 ```console
-VERSION=0.1.0
+VERSION=0.2.0
 docker run gemygk/annooddities:v${VERSION} annooddities -h
 ```
 
@@ -34,7 +34,7 @@ AnnoOddities can be installed with Singularity. If you don't have Singularity, p
 
 We can directly run AnnoOddities from the Singularity image hosted on DockerHub
 ```console
-VERSION=0.1.0
+VERSION=0.2.0
 singularity exec docker://gemygk/annooddities:v${VERSION} annooddities -h
 ```
 
@@ -42,15 +42,15 @@ Or, we can build and run a Singularity image, following the steps below:
 ```console
 # Create a Singularity definition file, like below:
 
-$ cat annooddities-0.1.0.def
+$ cat annooddities-0.2.0.def
 bootstrap: docker
-from: gemygk/annooddities:v0.1.0
+from: gemygk/annooddities:v0.2.0
 
 # Build the Singularity image
-$ sudo singularity build annooddities-0.1.0.sif annooddities-0.1.0.def
+$ sudo singularity build annooddities-0.2.0.sif annooddities-0.2.0.def
 
 # Execute AnnoOddities from the Singularity image
-$ singularity exec annooddities-0.1.0.sif annooddities -h
+$ singularity exec annooddities-0.2.0.sif annooddities -h
 ```
 
 ### Manual Installation
@@ -69,7 +69,7 @@ cd annooddities
 ```
 Build and install using [UV](https://github.com/astral-sh/uv?tab=readme-ov-file#uv)
 ```console
-version=0.1.0 \
+version=0.2.0 \
      && uv build \
      && pip install --prefix=/path/to/software/annooddities/${version}/x86_64 -U dist/*whl
 ```
